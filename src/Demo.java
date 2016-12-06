@@ -1,8 +1,9 @@
+/**
+ * Created by stud_6 on 28.11.16.
+ */
 public class Demo {
     public static void main(String[] args) {
-        System.out.println("Kanochkin_SA");
-
+        Breakk Demo = new Breakk();
+        Demo.Warm();
     }
 }
-
-
