@@ -4,21 +4,21 @@
 public class Campic extends Computer implements Compucter {
     Computer Campic = new Computer();
 
-    @Override
-    public void reading(){
-    System.out.println("Chtenie");}
+    public Campic(){
+        setBrand("NoBrand");
+        setModel("199");
 
-    @Override
-    public void recording() {
-        System.out.println("Zapis");
     }
+public Campic(String Bu, String Ka){
+        setBrand("Bu");
+        setModel("Ka");
+}
+
+
     @Override
-    public void searching() {
-        System.out.println("Poisk");
+    public void reading() {
+        System.out.println("Chtenie");
     }
-
-
-
 
 }
 

@@ -3,8 +3,9 @@
  */
 public interface Compucter {
     abstract void reading();
-    abstract void recording();
-    abstract void searching();
+
+
+
 
 
 

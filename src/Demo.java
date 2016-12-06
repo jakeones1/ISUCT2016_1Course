@@ -3,7 +3,8 @@
  */
 public class Demo {
     public static void main(String[] args) {
-        Breakk Demo = new Breakk();
-        Demo.Warm();
+        Campic Demo = new Campic("HDD", "12");
+        Demo.reading();
+        System.out.println(Demo.toString());
     }
 }
