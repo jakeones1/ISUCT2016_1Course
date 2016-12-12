@@ -20,7 +20,7 @@ public Campic(String Bu, String Ka){
         System.out.println("Chtenie");
     }
 
-
+vgjhv
 }
 
 
