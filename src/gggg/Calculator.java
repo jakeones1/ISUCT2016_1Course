@@ -5,6 +5,7 @@ package gggg;
  */
 public class Calculator {
     public double cal(double a, double x, double b){
+        Landex;
 
 
 
