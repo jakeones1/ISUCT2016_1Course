@@ -17,6 +17,7 @@ public class Calculator {
         m = Math.pow(m,2);
         y = z/m;
         System.out.println(y);
+        y
 
 
 
