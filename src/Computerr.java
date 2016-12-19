@@ -3,7 +3,7 @@
  */
 public class Computerr {
 
-    public static void main(String[] args() {
+    public static void main(String[] args) {
         Computer com = new Computer();
         com.setBrand("HDD");
         com.setModel("6200");
@@ -17,8 +17,6 @@ public class Computerr {
         for (int x=0; x<2; x=x+1) {System.out.println(mainchick[x].getVolume()) ;
     }
 }}
-
-
 
 
 
