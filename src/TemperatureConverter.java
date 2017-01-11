@@ -1,9 +1,7 @@
 /**
  * Created by Сергей on 11.01.2017.
  */
-public class Anait {
-    public static class TemperatureConverter {
-
+public class TemperatureConverter {
         public static void main(String[] args) {
 
             TemperatureConverter rc = new TemperatureConverter();
