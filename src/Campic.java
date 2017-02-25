@@ -12,7 +12,7 @@ public class Campic extends Computer implements Compucter {
 public Campic(String Bu, String Ka){
         setBrand("Bu");
         setModel("Ka");
-}
+}bbj
 
 
     @Override
