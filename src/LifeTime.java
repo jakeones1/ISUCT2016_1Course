@@ -16,13 +16,13 @@ import java.util.*;
 
 
 
-            calendar.set(Calendar.YEAR, 1998);
+            calendar.set(Calendar.YEAR,1998);
             calendar.set(Calendar.MONTH, 5);
             calendar.set(Calendar.DATE, 16);
             calendar.set(Calendar.HOUR_OF_DAY, 1);
             calendar.set(Calendar.MINUTE, 35);
-            calendar.set(Calendar.SECOND, 0);
-            calendar.set(Calendar.MILLISECOND, 0);
+            calendar.set(Calendar.SECOND, 10);
+            calendar.set(Calendar.MILLISECOND, 10);
 
             calendar2.set(Calendar.YEAR, currentCalendar.get(Calendar.YEAR) - calendar.get(Calendar.YEAR));
             calendar2.set(Calendar.MONTH, currentCalendar.get(Calendar.MONTH) - calendar.get(Calendar.MONTH));
@@ -31,7 +31,7 @@ import java.util.*;
             calendar2.set(Calendar.MINUTE, currentCalendar.get(Calendar.MINUTE) - calendar.get(Calendar.MINUTE));
             calendar2.set(Calendar.SECOND, currentCalendar.get(Calendar.SECOND) - calendar.get(Calendar.SECOND));
 
-            System.out.println("Мне исполнилось: " + calendar2.get(Calendar.YEAR) + " лет , " + calendar2.get(Calendar.MONTH) + " месяцев , " + calendar2.get(Calendar.DAY_OF_MONTH) + " дней , " + calendar2.get(Calendar.HOUR_OF_DAY) + " часов , " + calendar2.get(Calendar.MINUTE) + " минут , " + calendar2.get(Calendar.SECOND) + " секунд.");
+            System.out.println("Сейчас мне: " + calendar2.get(Calendar.YEAR) + " лет , " + calendar2.get(Calendar.MONTH) + " месяцев , " + calendar2.get(Calendar.DAY_OF_MONTH) + " дней , " + calendar2.get(Calendar.HOUR_OF_DAY) + " часов , " + calendar2.get(Calendar.MINUTE) + " минут , " + calendar2.get(Calendar.SECOND) + " секунд.");
         }
     }
 
