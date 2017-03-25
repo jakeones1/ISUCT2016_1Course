@@ -7,8 +7,7 @@ import static org.junit.Assert.*;
  */
 public class ComputerrTest {
     @Test
-    public void summ() throws Exception {
-        Computerr comp = new Computerr();
+    public void summ() throws Exception
         int result = comp.summ(2, 2);
         int expResult = 4;
         assertEquals(expResult, result);
