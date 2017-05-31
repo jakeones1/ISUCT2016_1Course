@@ -13,17 +13,16 @@ public class Sheba extends JFrame implements Serializable {
     private JTextField textField3;
     private JTextArea textArea1;
     private JButton loadButton;
-    private JButton result;
     private JButton resultButton;
     private JPanel root;
     private JButton saveButton;
     private JLabel xnLabel;
     private JLabel xkLabel;
-    private JLabel dxLabel;
+    private JLabel xdLabel;
 
-    private double xn = 1.25;
-    private double xk = 3.25;
-    private double xd = 0.4;
+    private double xn = 0.26;
+    private double xk = 0.66;
+    private double xd = 0.08;
 
     public Sheba() {
         $$$setupUI$$$();
@@ -42,6 +41,13 @@ public class Sheba extends JFrame implements Serializable {
             @Override
             public void actionPerformed(ActionEvent e) {
                 onLoad();
+            }
+        });
+
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                onSave();
             }
         });
     }
@@ -85,12 +91,15 @@ public class Sheba extends JFrame implements Serializable {
         xn = Double.parseDouble(textField1.getText());
         xk = Double.parseDouble(textField2.getText());
         xd = Double.parseDouble(textField3.getText());
-
-        try {
-            ArrayList<Double> answer = new Calculator().calc(xn, xk, xd);
-            textArea1.setText(String.valueOf(new ArrayList<Double>(answer)));
-        } catch (Exception e) {
-            e.printStackTrace();
+        if (xd >= 0.01 && xk <= 1000 && xn >= -1000) {
+            try {
+                ArrayList<Double> answer = new Calculator().calc(xn, xk, xd);
+                textArea1.setText(String.valueOf(new ArrayList<Double>(answer)));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            textArea1.setText("Error");
         }
     }
 
@@ -171,9 +180,9 @@ public class Sheba extends JFrame implements Serializable {
         xkLabel = new JLabel();
         xkLabel.setText("xk");
         panel1.add(xkLabel, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        dxLabel = new JLabel();
-        dxLabel.setText("dx");
-        panel1.add(dxLabel, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        xdLabel = new JLabel();
+        xdLabel.setText("xd");
+        panel1.add(xdLabel, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JPanel panel2 = new JPanel();
         panel2.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(3, 3, new Insets(0, 0, 0, 0), -1, -1));
         root.add(panel2, new com.intellij.uiDesigner.core.GridConstraints(0, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
