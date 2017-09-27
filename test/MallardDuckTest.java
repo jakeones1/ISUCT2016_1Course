@@ -37,6 +37,15 @@ public class MallardDuckTest {
             mallard.performFly();
             assertEquals("I'm flying!!\r\n", baos.toString());
         }
-
+    @Test
+    public void testMallardChangeFly() throws Exception {
+        Duck mallard = new MallardDuck();
+        mallard.performFly();
+        assertEquals("I'm flying!!\r\n", baos.toString());
+        baos.reset();
+        mallard.setFlyBehavior(new FlyNoWay());
+        mallard.performFly();
+        assertEquals("I can't fly\r\n", baos.toString());
+    }
 
 }
