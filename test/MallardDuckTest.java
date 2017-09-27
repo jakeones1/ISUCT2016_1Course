@@ -21,7 +21,7 @@ public class MallardDuckTest {
         public void testMallardQuack() throws Exception {
             Duck mallard = new MallardDuck();
             mallard.performQuack();
-            assertEquals("Quack!\r\n", baos.toString());
+            assertEquals("Quack\r\n", baos.toString());
 
 
         }
@@ -47,5 +47,17 @@ public class MallardDuckTest {
         mallard.performFly();
         assertEquals("I can't fly\r\n", baos.toString());
     }
+    @Test
+    public void testMallardChangeQuack() throws Exception {
+            Duck mallard = new MallardDuck();
+            mallard.performQuack();
+            assertEquals("Quack\r\n", baos.toString());
+            baos.reset();
+            mallard.setQuackBehavior(new MuteQuack());
+            mallard.performQuack();
+            assertEquals("<<< Silence >>>\r\n", baos.toString());
+
+    }
+
 
 }
