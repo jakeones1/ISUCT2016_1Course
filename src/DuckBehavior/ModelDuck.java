@@ -1,3 +1,8 @@
+package DuckBehavior;
+
+import DuckBehavior.Duck;
+import DuckBehavior.FlyNoWay;
+
 public class ModelDuck extends Duck {
     public ModelDuck(){
         flyBehavior = new FlyNoWay();

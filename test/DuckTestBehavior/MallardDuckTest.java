@@ -1,3 +1,6 @@
+package DuckTestBehavior;
+
+import DuckBehavior.*;
 import org.junit.*;
 
 import java.io.ByteArrayOutputStream;
@@ -21,7 +24,7 @@ public class MallardDuckTest {
         public void testMallardQuack() throws Exception {
             Duck mallard = new MallardDuck();
             mallard.performQuack();
-            assertEquals("Quack\r\n", baos.toString());
+            assertEquals("DuckBehavior.Quack\r\n", baos.toString());
 
 
         }
@@ -51,7 +54,7 @@ public class MallardDuckTest {
     public void testMallardChangeQuack() throws Exception {
             Duck mallard = new MallardDuck();
             mallard.performQuack();
-            assertEquals("Quack\r\n", baos.toString());
+            assertEquals("DuckBehavior.Quack\r\n", baos.toString());
             baos.reset();
             mallard.setQuackBehavior(new MuteQuack());
             mallard.performQuack();
